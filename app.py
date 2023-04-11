@@ -52,7 +52,9 @@ class SandPirate:
 
     # main
     def cruise(self):
-        print(self.capture_links())
+        courses = self.find_links()
+        for _, url in courses.items():
+            course_videos = self.capture_slaves(url)
 
 
 if __name__ == "__main__":
