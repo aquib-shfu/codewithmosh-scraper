@@ -4,12 +4,10 @@
 from bs4 import BeautifulSoup
 from bot import BotMaker
 import config
-import json
 
 
 class SandPirate:
     def __init__(self):
-        self.paths = json.load(open("paths.json", "r"))
         self.browser = BotMaker(browser="Chrome", remote=True)
 
     def find_links(self) -> dict:
